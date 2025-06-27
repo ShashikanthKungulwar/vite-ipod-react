@@ -1,0 +1,142 @@
+.html,
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+}
+
+/* The main container to set the ipod in middle of webpage */
+.container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f5f5f5;
+}
+
+
+
+/* styling for the body of the ipod */
+.ipod {
+  display: flex;
+  background: linear-gradient(20deg, rgba(2, 0, 36, 1) 0%, rgba(193, 221, 226, 1) 99%, rgba(0, 212, 255, 1) 100%);
+  width: 320px;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 14px;
+  gap: 25px;
+  border-radius: 50px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  transform: perspective(1000px);
+}
+/* refelction styling at bottom */
+.ipod-reflection {
+  width: 340px;
+  height: 60px;
+  background: linear-gradient(20deg, rgba(2, 0, 36, 1) 0%, rgba(193, 221, 226, 1) 99%, rgba(0, 212, 255, 1) 100%);
+  transform: scaleY(-1);
+  opacity: 0.3;
+  border-radius: 0 0 30px 30px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+
+
+
+
+/* the circular division with menu and other button the outer one */
+.controller {
+  background-color: white;
+  height: 190px;
+  width: 190px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* the small round button inside of the contriller  */
+.controller .division-button {
+  background-color: hsla(0, 0%, 13%, 0.5);
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  position: absolute;
+  box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, background-color 0.4s ease-in-out;
+}
+/* small effect for the middle button */
+.controller .division-button:hover {
+  transform: scale(1.1);
+  background-color: hsla(0, 0%, 13%, 0.8);
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.4);
+}
+/* the buttons like forward and backword in controller */
+.color {
+  background-color: transparent;
+  position: absolute;
+  height: 25px;
+}
+
+
+
+
+/* basic styling for display */
+.display {
+  height: 280px;
+  width: 320px;
+  border-radius: 15px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  overflow: hidden;
+  position: relative;
+  border: 4px black solid;
+}
+
+.display>div h2 {
+  margin-bottom: 3px;
+  padding: 10px;
+  padding-top: 15px;
+  text-align: left;
+}
+
+.display>div>ul,li {
+  list-style: none;
+  text-align: left;
+  margin: 0px;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px 5px;
+  display: flex;
+  justify-content: space-between;
+}
+/* some stylings need to be modified for better look for ul */
+.display>div>ul {
+  display: block;
+  padding: 18px 0px;
+}
+/* the blue active state for the menu items */
+.active {
+  background-color: #3783d8;
+  color: white;
+}
+
+audio {
+  width: 100%;
+  background-color: transparent;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+
+audio::-webkit-media-controls-enclosure {
+  border-radius: 0;
+  background-color: transparent;
+}
